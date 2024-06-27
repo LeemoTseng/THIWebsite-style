@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THI2024 - Agent Registration form</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/9142318aee.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap -->
+    <!-- date picker -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
+    />
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="wrapperRegis bg-light bg-gradient">
+      <!-- Navbar -->
+      <nav class="navbar bg-white py-3">
+        <div class="container logo">
+          <img src="./assets/logo-horizal.svg" alt="" />
+        </div>
+      </nav>
+      <!-- Banner -->
+      <div class="banner img-fluid object-fit-cover overflow-hidden">
+        <img
+          class="w-100"
+          src="./assets/stern-of-large-cargo-container-ship-import-export-2023-11-27-05-08-52-utc.jpg"
+          alt=""
+        />
+      </div>
+      <!-- Form -->
+      <div class="formSection container position-relative">
+        <div class="frame rounded bg-white shadow">
+          <!-- title & subtitle -->
+          <div class="text">
+            <h4 class="fw-semibold text-center pt-3">
+              Agent Registration form
+            </h4>
+            <p class="text-center small pt-3 text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              consequatur dolorum sit eius vel, suscipit tempora, fugiat beatae
+              quasi facere eaque sint. Accusantium veniam rerum corrupti modi
+              sint reprehenderit aliquam.
+            </p>
+            <!-- progress -->
+            <div class="step pt-3">
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary progress-bar-animated"
+                  role="progressbar"
+                  style="width: 33.3%"
+                  aria-valuenow="33.3"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <!-- Basic info -->
+            <h5 class="pt-5">Basic information*</h5>
+            <p class="text-primary">
+              <small>Please submit this part before Sep. 5</small>
+            </p>
+            <div class="basicInfo row">
+              <!-- companyName -->
+              <div class="companyName pt-3">
+                <label for="companyName" class="col-12 form-label"
+                  >Company Name <i class="fa-regular fa-circle-question"> </i
+                ></label>
+                <input
+                  type="text"
+                  id="companyName"
+                  class="col-12 form-control"
+                />
+              </div>
+              <!-- position -->
+              <div class="position pt-3 col-12 col-md-6">
+                <label for="position" class="form-label">Position </label>
+                <input type="text" id="position" class="col-12 form-control" />
+              </div>
+              <!-- Branch Name -->
+              <div class="branchName pt-3 col-12 col-md-6">
+                <label for="branchName" class="form-label">Branch Name </label>
+                <input
+                  type="text"
+                  id="branchName"
+                  class="col-12 form-control"
+                />
+              </div>
+              <!-- First Name -->
+              <div class="firstName pt-3 col-6 col-md-4">
+                <label for="firstName" class="form-label">First Name </label>
+                <input type="text" id="firstName" class="col-12 form-control" />
+              </div>
+              <!-- Last Name -->
+              <div class="lastName pt-3 col-6 col-md-4">
+                <label for="lastName" class="form-label">First Name </label>
+                <input type="text" id="firstName" class="form-control" />
+              </div>
+              <!-- Gender -->
+              <div class="gender pt-3 col-12 col-md-4">
+                <label for="gender" class="form-label">Gender </label>
+
+                <div class="d-flex">
+                  <div class="form-check px-3">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                    />
+                    <label class="form-check-label" for="male"> Male </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      checked
+                    />
+                    <label class="form-check-label" for="female">
+                      Female
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="email pt-3 col-12 col-md-6">
+                <label for="firstName" class="form-label">Email</label>
+                <input type="text" id="firstName" class="col-12 form-control" />
+              </div>
+              <!-- Passport Upload -->
+              <div class="mb-3 pt-3 col-12 col-md-6">
+                <label for="passportUpload" class="form-label"
+                  >Passport Upload</label
+                >
+                <input class="form-control" id="passportUpload" type="file" />
+              </div>
+              <!-- birth -->
+              <div class="email pt-3 col-6 col-md-4">
+                <label for="birth" class="form-label">Date of Birth</label>
+                <input
+                  type="text"
+                  id="datepicker"
+                  size="20"
+                  class="col-12 form-control"
+                  placeholder="mm/dd/yyyy"
+                />
+              </div>
+              <!-- passport number -->
+              <div class="passport pt-3 col-6 col-md-4">
+                <label for="passport" class="form-label">Passport No.</label>
+                <input type="text" id="passport" class="col-12 form-control" />
+              </div>
+              <!-- nationality -->
+              <div class="nationality pt-3 col-12 col-md-4">
+                <label for="nationality" class="form-label">Nationality </label>
+                <select class="form-select" aria-label="Small select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <!-- room type -->
+              <div class="roomType pt-3 col-12 col-md-6">
+                <label for="roomType" class="form-label">Room Type </label>
+                <select
+                  class="form-select form-select"
+                  aria-label="Small select example"
+                >
+                  <option selected>Select Room type</option>
+                  <option value="SingleRoomOcean210">
+                    Single Room(Ocean View) USD$210
+                  </option>
+                  <option value="SingleRoomGarden160">
+                    Single Room(Garden View) USD$160
+                  </option>
+                  <option value="SingleRoomOcean420">
+                    Single Room(Ocean Suite) USD$420
+                  </option>
+                  <option value="DoubleRoomOcean230">
+                    Double Room(Ocean View) USD$230
+                  </option>
+                  <option value="DoubleRoomOcean440">
+                    Double Room(Ocean Suite) USD$440
+                  </option>
+                  <option value="TwinRoomGarden180">
+                    Twin Room(Garden View) USD$180
+                  </option>
+                </select>
+              </div>
+              <!-- bed type -->
+              <div class="bedType pt-3 col-12 col-md-6">
+                <label for="bedType" class="form-label">Bed Type </label>
+                <select class="form-select" aria-label="Small select example">
+                  <option selected>Open this select menu</option>
+                  <option value="OneLargeBed">One Large Bed</option>
+                  <option value="TwinBeds">Twin Beds (+USD $60)</option>
+                </select>
+              </div>
+              <!-- roommate -->
+              <div class="roommate pt-3 col-12">
+                <label for="roommate" class="form-label">Roommates </label>
+                <div class="d-flex">
+                  <div class="form-check px-3">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="roommate"
+                      id="colleague"
+                      checked
+                    />
+                    <label class="form-check-label noPaddings" for="colleague">
+                      Colleague
+                    </label>
+                    <div class="colleagueName">
+                      <p class="pt-2">
+                        <i class="fa-solid fa-circle-exclamation"> </i>
+                        Please enter the name on the passport
+                      </p>
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Colleague Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="roommate"
+                      id="family"
+                      checked
+                    />
+                    <label class="form-check-label noPaddings" for="family">
+                      Family
+                    </label>
+
+                    <!-- Add Family - btn -->
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Add Family
+                    </button>
+
+                    <!-- Add Family - Modal -->
+                    <div
+                      class="modal fade"
+                      id="myModal"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="myModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1
+                              class="modal-title fs-5"
+                              id="staticBackdropLabel"
+                            >
+                              Modal title
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Understood
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- participate -->
+              <div class="participate pt-3 col-12">
+                <label for="participate" class="form-label"
+                  >Will you participate in the City Tour (Oct.16) ?
+                </label>
+
+                <div class="d-flex">
+                  <div class="form-check px-3">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="participate"
+                      id="radioYes"
+                    />
+                    <label class="form-check-label noPaddings" for="radioYes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="participate"
+                      id="radioNo"
+                      checked
+                    />
+                    <label class="form-check-label noPaddings" for="radioNo">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- request -->
+              <div class="mb-3 pt-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Special Requests</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Your special request here..."
+                ></textarea>
+              </div>
+              <!-- btn - continue -->
+              <button
+                type="button"
+                class="allBtn mx-auto btn btn-primary text-light mt-5"
+              >
+                Continue <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

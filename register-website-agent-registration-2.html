@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THI2024 - Agent Registration form</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/9142318aee.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- date picker -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="wrapperRegis bg-light bg-gradient">
+      <!-- Navbar -->
+      <nav class="navbar bg-white py-3">
+        <div class="container logo">
+          <img src="./assets/logo-horizal.svg" alt="" />
+        </div>
+      </nav>
+      <!-- Banner -->
+      <div class="banner img-fluid object-fit-cover overflow-hidden">
+        <img
+          class="w-100"
+          src="./assets/stern-of-large-cargo-container-ship-import-export-2023-11-27-05-08-52-utc.jpg"
+          alt=""
+        />
+      </div>
+      <!-- Form -->
+      <div class="formSection container position-relative">
+        <div class="frame rounded bg-white shadow">
+          <!-- title & subtitle -->
+          <div class="text">
+            <h4 class="fw-semibold text-center pt-3">
+              Agent Registration form
+            </h4>
+            <p class="text-center small pt-3 text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              consequatur dolorum sit eius vel, suscipit tempora, fugiat beatae
+              quasi facere eaque sint. Accusantium veniam rerum corrupti modi
+              sint reprehenderit aliquam.
+            </p>
+            <!-- progress -->
+            <div class="step pt-3">
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary progress-bar-animated"
+                  role="progressbar"
+                  style="width: 66.6%"
+                  aria-valuenow="66.6"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <!-- Basic info -->
+            <h5 class="pt-5">Other information*</h5>
+            <p class="text-primary">
+              <small
+                >This section can be left blank for now. Please come back to
+                fill in the information once it is confirmed.</small
+              >
+            </p>
+            <div class="otherInfo row">
+              <!-- Visa no. -->
+              <div class="visanum pt-3 col-12 col-md-4">
+                <label for="visaNum" class="form-label"
+                  >Visa No. <i class="fa-regular fa-circle-question"> </i
+                ></label>
+                <input type="text" id="visaNum" class="form-control" />
+              </div>
+              <!-- Visa expiration -->
+              <div class="expiration pt-3 col-6 col-md-4">
+                <label for="visaExpiration" class="form-label"
+                  >Visa Expiry Date</label
+                >
+                <input
+                  type="text"
+                  id="visaExpiration"
+                  size="20"
+                  class="form-control datepicker"
+                />
+              </div>
+              <!-- Entry airport of Vietnam immigration -->
+              <div class="nationality pt-3 col-12 col-md-4">
+                <label for="entryAirport" class="form-label"
+                  >Entry airport of Vietnam immigration</label
+                >
+                <select
+                  id="entryAirport"
+                  class="form-select"
+                  aria-label="Small select example"
+                >
+                  <option selected>Select airport</option>
+                  <option value="DAD">DAD: Da Nang</option>
+                  <option value="SGN">SGN: Tan Son Nhat</option>
+                  <option value="HAN">HAN: Noi Bai</option>
+                </select>
+              </div>
+              <!-- arrival date and time-->
+              <div class="arrivalTime pt-3 col-6 col-md-3">
+                <label for="arrivalDateTime" class="form-label w-100"
+                  >Arrival Date and Time</label
+                >
+                <input
+                  type="text"
+                  id="arrivalDateTime"
+                  size="20"
+                  class="form-control datepicker"
+                />
+              </div>
+              <!-- arrival flight no.-->
+              <div class="arrival pt-3 col-6 col-md-3">
+                <label for="arrivalFlight" class="form-label"
+                  >Arrival Flight No.</label
+                >
+                <input
+                  type="text"
+                  id="arrivalFlight"
+                  size="20"
+                  class="form-control"
+                />
+              </div>
+              <!-- Departure date and time-->
+              <div class="departureTime pt-3 col-6 col-md-3">
+                <label for="departureDateTime" class="form-label"
+                  >Departure Date and Time</label
+                >
+                <input
+                  type="text"
+                  id="departureDateTime"
+                  size="20"
+                  class="form-control datepicker"
+                />
+              </div>
+              <!-- Departure flight no.-->
+              <div class="departure pt-3 col-6 col-md-3">
+                <label for="departureFlight" class="form-label w-100"
+                  >Departure Flight No.</label
+                >
+                <input
+                  type="text"
+                  id="departureFlight"
+                  size="20"
+                  class="form-control"
+                />
+              </div>
+              <!-- transportation options-->
+              <div class="transportation pt-3 col-12">
+                <label for="transportation" class="form-label"
+                  >Transportation</label
+                >
+                <i class="fa-regular fa-circle-question"> </i>
+                <div class="d-flex">
+                  <div class="form-check px-3">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="transportation"
+                      id="taxi"
+                    />
+                    <label class="form-check-label noPaddings" for="taxi"
+                      >By Taxi</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="transportation"
+                      id="THI"
+                    />
+                    <label class="form-check-label noPaddings" for="THI"
+                      >Pick up by T.H.I.</label
+                    >
+                    It usually takes about 20 minutes from Da Nang Airport to
+                    Resort by taxi.
+                  </div>
+                </div>
+              </div>
+              <!-- Meal preferences-->
+              <div class="transportation pt-3 col-12">
+                <label for="transportation" class="form-label"
+                  >Meal preferences</label
+                >
+                <div class="d-flex">
+                  <div class="form-check px-3">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="mealPreferences"
+                      id="nonVegetarian"
+                    />
+                    <label
+                      class="form-check-label noPaddings"
+                      for="nonVegetarian"
+                      >Non-vegetarian</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input p-1"
+                      type="radio"
+                      name="mealPreferences"
+                      id="vegetarian"
+                    />
+                    <label class="form-check-label noPaddings" for="vegetarian"
+                      >Vegetarian</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- btn - back -->
+              <button
+                type="button"
+                class="allBtn backBtn mx-auto btn btn-outline-primary mt-2 col-12"
+              >
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <!-- btn - continue -->
+              <button
+                type="button"
+                class="allBtn mx-auto btn btn-primary text-light mt-2 col-12"
+              >
+                Continue <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".datepicker").datepicker();
+      });
+    </script>
+  </body>
+</html>

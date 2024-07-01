@@ -20,6 +20,13 @@
     />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!-- time picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
     <!-- custom css -->
     <link rel="stylesheet" href="./style.css" />
     <script src="./main.js"></script>
@@ -81,12 +88,14 @@
             <div class="otherInfo row">
               <!-- Visa no. -->
               <div class="visanum pt-3 col-12 col-md-4">
-                <label for="visaNum" class="form-label">Visa No. </label>
+                <label for="visaNum" class="form-label fw-medium"
+                  >Visa No.
+                </label>
                 <input type="text" id="visaNum" class="form-control" />
               </div>
               <!-- Visa expiration -->
               <div class="expiration pt-3 col-6 col-md-4">
-                <label for="visaExpiration" class="form-label"
+                <label for="visaExpiration" class="form-label fw-medium"
                   >Visa Expiry Date</label
                 >
                 <input
@@ -98,7 +107,7 @@
               </div>
               <!-- Entry airport of Vietnam immigration -->
               <div class="nationality pt-3 col-12 col-md-4">
-                <label for="entryAirport" class="form-label"
+                <label for="entryAirport" class="form-label fw-medium"
                   >Entry Airport of Taiwan</label
                 >
                 <select
@@ -113,19 +122,18 @@
               </div>
               <!-- arrival date and time-->
               <div class="arrivalTime pt-3 col-6 col-lg-3">
-                <label for="arrivalDateTime" class="form-label w-100"
+                <label for="arrivalDateTime" class="form-label w-100 fw-medium"
                   >Arrival Date and Time</label
                 >
                 <input
+                  class="form-control datetimepicker"
                   type="text"
-                  id="arrivalDateTime"
-                  size="20"
-                  class="form-control datepicker"
+                  class="form-control"
                 />
               </div>
               <!-- arrival flight no.-->
               <div class="arrival pt-3 col-6 col-lg-3">
-                <label for="arrivalFlight" class="form-label"
+                <label for="arrivalFlight" class="form-label fw-medium"
                   >Arrival Flight No.</label
                 >
                 <input
@@ -137,19 +145,18 @@
               </div>
               <!-- Departure date and time-->
               <div class="departureTime pt-3 col-6 col-lg-3">
-                <label for="departureDateTime" class="form-label"
+                <label for="departureDateTime" class="form-label fw-medium"
                   >Departure Date and Time</label
                 >
                 <input
                   type="text"
                   id="departureDateTime"
-                  size="20"
-                  class="form-control datepicker"
+                  class="form-control datetimepicker"
                 />
               </div>
               <!-- Departure flight no.-->
               <div class="departure pt-3 col-6 col-lg-3">
-                <label for="departureFlight" class="form-label w-100"
+                <label for="departureFlight" class="form-label w-100 fw-medium"
                   >Departure Flight No.</label
                 >
                 <input
@@ -161,7 +168,7 @@
               </div>
               <!-- transportation options-->
               <div class="transportation pt-3 col-12">
-                <label for="transportation" class="form-label"
+                <label for="transportation" class="form-label fw-medium"
                   >Transportation</label
                 >
                 <span
@@ -201,7 +208,9 @@
 
               <!-- Meal preferences-->
               <div class="transportation pt-3 col-12">
-                <label for="transportation" class="form-label"
+                <label
+                  for="transportation fw-medium"
+                  class="form-label fw-medium"
                   >Meal preferences</label
                 >
                 <div class="d-flex">
@@ -232,16 +241,22 @@
                 </div>
               </div>
               <!-- Meeting Requests-->
-              <p class="pt-3 col-12">Meeting Requests</p>
+
+              <p class="pt-3 col-12 fw-medium">Meeting Requests</p>
               <table class="MeetingRequests table table-striped mb-5">
                 <tr>
-                  <th>Select team</th>
-                  <th>Territory</th>
+                  <th class="fw-medium">Select team</th>
+                  <th class="fw-medium">Territory</th>
                 </tr>
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Taiwan" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Taiwan"
+                      />
                       Taiwan
                     </label>
                   </td>
@@ -251,6 +266,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="North China (1)"
@@ -266,6 +282,7 @@
                   <td>
                     <label class="checkbox-label inp-cbx">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="North China (2)"
@@ -279,6 +296,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="Central China"
@@ -292,6 +310,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="S. East China"
@@ -306,7 +325,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="S. China" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="S. China"
+                      />
                       S. China
                     </label>
                   </td>
@@ -315,7 +339,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Hong Kong" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Hong Kong"
+                      />
                       Hong Kong
                     </label>
                   </td>
@@ -325,6 +354,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="Vietnam/Cambodia"
@@ -337,7 +367,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Thailand" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Thailand"
+                      />
                       Thailand
                     </label>
                   </td>
@@ -346,7 +381,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Philippines" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Philippines"
+                      />
                       Philippines
                     </label>
                   </td>
@@ -355,7 +395,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Malaysia" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Malaysia"
+                      />
                       Malaysia
                     </label>
                   </td>
@@ -365,6 +410,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="Japan (THI-Japan)"
@@ -377,7 +423,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Korea (Logi)" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Korea (Logi)"
+                      />
                       Korea (Logi)
                     </label>
                   </td>
@@ -387,6 +438,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="Indonesia (Dexter)"
@@ -399,7 +451,12 @@
                 <tr>
                   <td>
                     <label class="checkbox-label">
-                      <input type="checkbox" name="team" value="Singapore" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="team"
+                        value="Singapore"
+                      />
                       Singapore
                     </label>
                   </td>
@@ -409,6 +466,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="RBU (Railway Business Unit)"
@@ -422,6 +480,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="TGA (1) - air"
@@ -435,6 +494,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="TGA (2) - air"
@@ -448,6 +508,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="TGA (3) - air"
@@ -461,6 +522,7 @@
                   <td>
                     <label class="checkbox-label">
                       <input
+                        class="form-check-input"
                         type="checkbox"
                         name="team"
                         value="Pricing team (ocean)"

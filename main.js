@@ -7,6 +7,12 @@ $(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".datepicker").datepicker();
+  $(".datetimepicker").datetimepicker();})
+
+
+
 //隱藏顯示
 
 document.addEventListener("DOMContentLoaded", function () {

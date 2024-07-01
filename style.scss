@@ -42,6 +42,11 @@ body {
   }
   .imgSection {
     height: 100vh;
+    position: relative;
+    .slogan{
+      width: 5vw;
+    }
+
   }
   @media (max-width: 767.98px) {
     .imgSection {
@@ -95,12 +100,12 @@ body {
       }
     }
   }
+  .MeetingRequests{
+
+  }
   .allBtn{
     width: 315px;
   }
   .backBtn{
-    :hover{
-      color:white;
-    }
   }
 }

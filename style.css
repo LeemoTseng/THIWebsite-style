@@ -11975,6 +11975,10 @@ body {
 }
 .wrapperIndex .imgSection {
   height: 100vh;
+  position: relative;
+}
+.wrapperIndex .imgSection .slogan {
+  width: 5vw;
 }
 @media (max-width: 767.98px) {
   .wrapperIndex .imgSection {
@@ -12027,7 +12031,4 @@ body {
 }
 .wrapperRegis .allBtn {
   width: 315px;
-}
-.wrapperRegis .backBtn :hover {
-  color: white;
 }/*# sourceMappingURL=style.css.map */

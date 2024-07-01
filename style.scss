@@ -6,7 +6,6 @@
 //* 1. $Variables
 //* 2. $Font
 //* 3. $Body
-//* 4. $MediaQuery
 
 //------------------//
 //  1. $Variables
@@ -34,8 +33,10 @@ body {
 //------------------//
 //  3. $Body
 //------------------//
+
+
 .wrapperIndex {
-  .wrap{
+  .wrap {
     @media (max-width: 767.98px) {
       width: 100%;
     }
@@ -43,10 +44,9 @@ body {
   .imgSection {
     height: 100vh;
     position: relative;
-    .slogan{
+    .slogan {
       width: 5vw;
     }
-
   }
   @media (max-width: 767.98px) {
     .imgSection {
@@ -64,11 +64,19 @@ body {
       .text {
         padding-top: 100px;
       }
-      
     }
     .logo {
       width: 150px;
-      padding-bottom:20px ;
+      padding-bottom: 20px;
+    }
+    a {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }
@@ -77,6 +85,9 @@ body {
     .logo {
       justify-content: center;
       align-items: center;
+    }
+    .slogan {
+      display: none;
     }
   }
 
@@ -100,12 +111,74 @@ body {
       }
     }
   }
-  .MeetingRequests{
-
-  }
-  .allBtn{
+.links{
+  width: 315px;
+  text-align: center;
+  margin: 0 auto;
+}
+  .allBtn {
     width: 315px;
   }
-  .backBtn{
+  .backBtn {
+    &:hover{
+      color:white;
+    }
+    a {
+      color: $primary;
+    }
   }
+
+  .stepSection {
+    .line {
+      height: 4px;
+      background-color: $primary;
+    }
+    .checkCircle {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      right: -50px;
+      top: -0px;
+      .taskIcon {
+        font-size: 50px;
+        color: rgb(87, 156, 87);
+      }
+      .taskIconUnactive {
+        font-size: 50px;
+        color: rgb(199, 199, 199);
+      }
+    }
+  }
+  .notice {
+    color: rgb(172, 172, 172);
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+// 表單驗證
+.has-error input,
+.has-error select {
+  border-color: #a94442;
+}
+
+.has-success input,
+.has-success select {
+  border-color: #3c763d;
+}
+
+.help-block.error {
+  color: #a94442;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+//隱藏
+#colleagueName {
+  display: none;
 }

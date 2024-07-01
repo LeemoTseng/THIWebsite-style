@@ -9,7 +9,8 @@
       src="https://kit.fontawesome.com/9142318aee.js"
       crossorigin="anonymous"
     ></script>
-    <!-- bootstrap -->
+    <!-- Validate form -->
+    <script type="text/javascript" src="plugins/validate.min.js"></script>
     <!-- date picker -->
     <link
       rel="stylesheet"
@@ -21,7 +22,7 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <div class="wrapperRegis bg-light bg-gradient">
@@ -29,6 +30,9 @@
       <nav class="navbar bg-white py-3">
         <div class="container logo">
           <img src="./assets/logo-horizal.svg" alt="" />
+          <div class="slogan">
+            <img src="assets/slogan.svg" alt="" />
+          </div>
         </div>
       </nav>
       <!-- Banner -->
@@ -152,9 +156,8 @@
                 <label for="birth" class="form-label">Date of Birth</label>
                 <input
                   type="text"
-                  id="datepicker"
                   size="20"
-                  class="col-12 form-control"
+                  class="datepicker col-12 form-control"
                   placeholder="mm/dd/yyyy"
                 />
               </div>
@@ -220,7 +223,6 @@
                       type="radio"
                       name="roommate"
                       id="colleague"
-                      checked
                     />
                     <label
                       class="form-check-label noPaddings flex-wrap"
@@ -228,7 +230,8 @@
                     >
                       Colleague
                     </label>
-                    <div class="colleagueName">
+
+                    <div id="colleagueName">
                       <p class="pt-2">
                         <i class="fa-solid fa-circle-exclamation"> </i>
                         Please enter the name on the passport
@@ -246,7 +249,7 @@
                       type="radio"
                       name="roommate"
                       id="family"
-                      checked
+                      value="family"
                     />
                     <label
                       class="form-check-label noPaddings flex-wrap"
@@ -254,59 +257,16 @@
                     >
                       Family
                     </label>
-
-                    <!-- Add Family - btn -->
                     <button
                       type="button"
                       class="btn btn-outline-primary"
+                      id="addFamilyBtn"
                       data-bs-toggle="modal"
                       data-bs-target="#myModal"
+                      style="display: none"
                     >
                       Add Family
                     </button>
-
-                    <!-- Add Family - Modal -->
-                    <div
-                      class="modal fade"
-                      id="myModal"
-                      data-bs-backdrop="static"
-                      data-bs-keyboard="false"
-                      tabindex="-1"
-                      aria-labelledby="myModalLabel"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h1
-                              class="modal-title fs-5"
-                              id="staticBackdropLabel"
-                            >
-                              Modal title
-                            </h1>
-                            <button
-                              type="button"
-                              class="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                          </div>
-                          <div class="modal-body">...</div>
-                          <div class="modal-footer">
-                            <button
-                              type="button"
-                              class="btn btn-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                              Understood
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -357,12 +317,13 @@
                 ></textarea>
               </div>
               <!-- btn - continue -->
-              <button
-                type="button"
-                class="allBtn mx-auto btn btn-primary text-light mt-5"
+              <a
+                href="register-website-agent-registration-2.html"
+                class="links"
               >
-                Continue <i class="fa-solid fa-arrow-right"></i>
-              </button>
+                <button type="submit" class="allBtn btn btn-primary text-light">
+                  Continue<i class="fa-solid fa-arrow-right"></i></button
+              ></a>
             </div>
           </div>
         </div>

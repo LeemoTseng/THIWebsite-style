@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THI2024 - Agent Registration form</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/9142318aee.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- date picker -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="wrapperRegis bg-light bg-gradient">
+      <!-- Nav -->
+      <nav class="navbar bg-white py-3">
+        <div class="container logo">
+          <img src="./assets/logo-horizal.svg" alt="" />
+          <div class="slogan">
+            <img src="assets/slogan.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner img-fluid object-fit-cover overflow-hidden">
+        <img
+          class="w-100"
+          src="assets/chinese-temple-in-kuala-lumpur-2023-11-27-05-34-16-utc.jpg"
+          alt=""
+        />
+      </div>
+      <!-- Form -->
+      <div class="formSection container position-relative">
+        <div class="frame rounded bg-white shadow">
+          <!-- title & subtitle -->
+          <div class="text">
+            <h2 class="fw-semibold text-center pt-3">
+              Congratulations! <br />You’ve completed the application!
+            </h2>
+            <p class="text-center small pt-3 text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              consequatur dolorum sit eius vel, suscipit tempora, fugiat beatae
+              quasi facere eaque sint. Accusantium veniam rerum corrupti modi
+              sint reprehenderit aliquam.
+            </p>
+            <!-- progress -->
+            <div class="step pt-3">
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary progress-bar-animated"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <!-- completed img -->
+            <div class="completedImg text-center mt-5">
+              <img src="assets/completed.svg" alt="" />
+            </div>
+            <!-- next... -->
+            <h3 class="text-center my-5">Next ...</h3>
+            <div
+              class="stepSection row grid gap-0 row-gap-5 column-gap-5 justify-content-center"
+            >
+              <!-- You’ve registered the conference! -->
+              <div
+                class="card shadow border border-0 p-4 col-12 col-md-4"
+                style="width: 18rem"
+              >
+                <div class="card-body position-relative">
+                  <div
+                    class="checkCircle bg-white rounded-pill shadow-sm position-absolute"
+                  >
+                    <i class="taskIcon fa-regular fa-circle-check"></i>
+                  </div>
+                  <h5 class="card-title">You’ve registered the conference!</h5>
+                  <div class="line w-50 my-3"></div>
+                  <p class="card-text text-body-tertiary">
+                    The more complete the information you provide, the sooner we
+                    can schedule time with the team!
+                  </p>
+                </div>
+              </div>
+              <!-- 班機資料填寫 -->
+              <div
+                class="card shadow border border-0 p-4 col-12 col-md-4"
+                style="width: 18rem"
+              >
+                <div class="card-body position-relative">
+                  <div
+                    class="checkCircle bg-white rounded-pill shadow-sm position-absolute"
+                  >
+                    <i class="taskIconUnactive fa-regular fa-circle-check"></i>
+                  </div>
+                  <h5 class="card-title">班機資料填寫</h5>
+                  <div class="line w-50 my-3"></div>
+                  <p class="card-text text-body-tertiary">
+                    The more complete the information you provide, the sooner we
+                    can schedule time with the team!
+                  </p>
+
+                  <a href="#" class="card-link text-primary"
+                    >Learn more <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Download the app to view schedules! -->
+              <div
+                class="card shadow border border-0 p-4 col-12 col-md-4"
+                style="width: 18rem"
+              >
+                <div class="card-body position-relative">
+                  <div
+                    class="checkCircle bg-white rounded-pill shadow-sm position-absolute"
+                  >
+                    <i class="taskIconUnactive fa-regular fa-circle-check"></i>
+                  </div>
+                  <h5 class="card-title">
+                    Download the app to view schedules!
+                  </h5>
+                  <div class="line w-50 my-3"></div>
+                  <p class="card-text text-body-tertiary">
+                    The more complete the information you provide, the sooner we
+                    can schedule time with the team!
+                  </p>
+
+                  <a href="#" class="card-link text-primary"
+                    >Learn more <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <hr />
+              <div class="notice">
+                <h5 class="notice text-center text-body-tertiary notice">
+                  Notice
+                </h5>
+                <p class="small notice text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  nec bibendum turpis, ut iaculis justo. Etiam dignissim arcu
+                  nunc, eu rutrum orci volutpat a. Morbi eget dui nec Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec
+                  bibendum turpis, ut iaculis justo. Etiam dignissim arcu nunc,
+                  eu rutrum orci volutpat a. Morbi eget dui nec Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Fusce nec
+                  bibendum turpis, ut iaculis justo. Etiam dignissim arcu nunc,
+                  eu rutrum orci volutpat a. Morbi eget dui nec
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

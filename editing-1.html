@@ -307,16 +307,443 @@
                     >
                       Family
                     </label>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary"
-                      id="addFamilyBtn"
+                    <a
+                      href="#"
+                      class="card-link text-primary"
                       data-bs-toggle="modal"
-                      data-bs-target="#myModal"
-                      style="display: none"
+                      data-bs-target="#exampleModal"
                     >
-                      Add Family
-                    </button>
+                      <button
+                        type="button"
+                        class="btn backBtn btn-outline-primary"
+                        id="addFamilyBtn"
+                        style="display: none"
+                      >
+                        Add Family
+                      </button>
+                    </a>
+
+                    <!-- add family - modal -->
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body p-3">
+                            <h2
+                              class="modal-title fs-5 text-center pt-3 fw-semibold"
+                              id="exampleModalLabel"
+                            >
+                              Add new family member
+                            </h2>
+                            <div class="line w-50 mx-auto mt-3"></div>
+                            <p class="text-center text-body-tertiary pt-3">
+                              Please fill in the information for accompanying
+                              family members.
+                            </p>
+                            <!-- F-First Name -->
+                            <div class="firstName pt-3 col-6">
+                              <label
+                                for="F-firstName"
+                                class="form-label fw-medium"
+                                >First Name
+                              </label>
+                              <input
+                                type="text"
+                                id="F-firstName"
+                                class="col-12 form-control"
+                                required
+                              />
+                            </div>
+                            <!-- F-Last Name -->
+                            <div class="lastName pt-3 col-6">
+                              <label
+                                for="F-lastName"
+                                class="form-label fw-medium"
+                                >Last Name
+                              </label>
+                              <input
+                                type="text"
+                                id="F-firstName"
+                                class="form-control"
+                                required
+                              />
+                            </div>
+                            <!-- F-Gender -->
+                            <div class="gender pt-3 col-12">
+                              <label for="F-gender" class="form-label fw-medium"
+                                >Gender
+                              </label>
+
+                              <div class="d-flex">
+                                <div class="form-check px-3">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-gender"
+                                    id="F-male"
+                                  />
+                                  <label class="form-check-label" for="F-male">
+                                    Male
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-gender"
+                                    id="F-female"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="F-female"
+                                  >
+                                    Female
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- F-Email -->
+                            <div class="email pt-3 col-12 col-md-6">
+                              <label
+                                for="F-firstName"
+                                class="form-label fw-medium"
+                                >Email</label
+                              >
+                              <input
+                                type="email"
+                                id="F-firstName"
+                                class="col-12 form-control"
+                                required
+                              />
+                            </div>
+                            <!-- F-Passport Upload -->
+                            <div class="mb-3 pt-3 col-12">
+                              <label
+                                for="F-passportUpload"
+                                class="form-label fw-medium"
+                                >Passport Upload</label
+                              >
+                              <input
+                                class="form-control"
+                                id="F-passportUpload"
+                                type="file"
+                                required
+                              />
+                            </div>
+                            <!-- F-birth -->
+                            <div class="email pt-3 col-12">
+                              <label for="F-birth" class="form-label fw-medium"
+                                >Date of Birth</label
+                              >
+                              <input
+                                type="text"
+                                size="20"
+                                class="datepicker col-12 form-control"
+                                placeholder="mm/dd/yyyy"
+                                required
+                              />
+                            </div>
+                            <!-- F-passport number -->
+                            <div class="passport pt-3 col-6 col-md-4">
+                              <label
+                                for="F-passport"
+                                class="form-label fw-medium"
+                                >Passport No.</label
+                              >
+                              <input
+                                type="text"
+                                id="F-passport"
+                                class="col-12 form-control"
+                                required
+                              />
+                            </div>
+                            <!-- F-nationality -->
+                            <div class="nationality pt-3 col-12 col-md-4">
+                              <label
+                                for="F-nationality"
+                                class="form-label fw-medium"
+                                >Nationality
+                              </label>
+                              <select
+                                class="form-select"
+                                aria-label="Small select example"
+                              >
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <!-- F-participate -->
+                            <div class="participate pt-3 col-12">
+                              <label
+                                for="F-participate"
+                                class="form-label fw-medium"
+                                >Will you participate in the City Tour (Oct.16)
+                                ?
+                              </label>
+
+                              <div class="d-flex">
+                                <div class="form-check px-3">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-participate"
+                                    id="F-radioYes"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-radioYes"
+                                  >
+                                    Yes
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-participate"
+                                    id="F-radioNo"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-radioNo"
+                                  >
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- F-request -->
+                            <div class="mb-3 pt-3">
+                              <label
+                                for="F-exampleFormControlTextarea1"
+                                class="form-label fw-medium"
+                                >Special Requests</label
+                              >
+                              <textarea
+                                class="form-control"
+                                id="F-exampleFormControlTextarea1"
+                                rows="3"
+                                placeholder="Your special request here..."
+                              ></textarea>
+                            </div>
+                            <!-- F-Visa no. -->
+                            <div class="visanum pt-3 col-12 col-md-4">
+                              <label
+                                for="F-visaNum"
+                                class="form-label fw-medium"
+                                >Visa No.
+                              </label>
+                              <input
+                                type="text"
+                                id="F-visaNum"
+                                class="form-control"
+                              />
+                            </div>
+                            <!-- F-Visa expiration -->
+                            <div class="expiration pt-3 col-6 col-md-4">
+                              <label
+                                for="F-visaExpiration"
+                                class="form-label fw-medium"
+                                >Visa Expiry Date</label
+                              >
+                              <input
+                                type="text"
+                                id="F-visaExpiration"
+                                size="20"
+                                class="form-control datepicker"
+                              />
+                            </div>
+                            <!-- F-Entry airport of Vietnam immigration -->
+                            <div class="nationality pt-3 col-12">
+                              <label
+                                for="F-entryAirport"
+                                class="form-label fw-medium"
+                                >Entry Airport of Taiwan</label
+                              >
+                              <select
+                                id="F-entryAirport"
+                                class="form-select"
+                                aria-label="Small select example"
+                              >
+                                <option selected>Select Airport</option>
+                                <option value="TPE">
+                                  TPE: TAIPEI-CHIANG KAI SHEK
+                                </option>
+                                <option value="TSA">
+                                  TSA: UNG SHAN - TAIPEI CITY
+                                </option>
+                              </select>
+                            </div>
+                            <!-- F-arrival date and time-->
+                            <div class="arrivalTime pt-3 col-12">
+                              <label
+                                for="F-arrivalDateTime"
+                                class="form-label w-100 fw-medium"
+                                >Arrival Date and Time</label
+                              >
+                              <input
+                                class="form-control datetimepicker"
+                                type="text"
+                              />
+                            </div>
+                            <!-- arrival flight no.-->
+                            <div class="arrival pt-3 col-12">
+                              <label
+                                for="F-arrivalFlight"
+                                class="form-label fw-medium"
+                                >Arrival Flight No.</label
+                              >
+                              <input
+                                type="text"
+                                id="F-arrivalFlight"
+                                size="20"
+                                class="form-control"
+                              />
+                            </div>
+                            <!-- Departure date and time-->
+                            <div class="departureTime pt-3 col-12">
+                              <label
+                                for="F-departureDateTime"
+                                class="form-label fw-medium"
+                                >Departure Date and Time</label
+                              >
+                              <input
+                                type="text"
+                                id="F-departureDateTime"
+                                class="form-control datetimepicker"
+                              />
+                            </div>
+                            <!-- Departure flight no.-->
+                            <div class="departure pt-3 col-12">
+                              <label
+                                for="F-departureFlight"
+                                class="form-label w-100 fw-medium"
+                                >Departure Flight No.</label
+                              >
+                              <input
+                                type="text"
+                                id="F-departureFlight"
+                                size="20"
+                                class="form-control"
+                              />
+                            </div>
+                            <!-- transportation options-->
+                            <div class="transportation pt-3 col-12">
+                              <label
+                                for="F-transportation"
+                                class="form-label fw-medium"
+                                >Transportation</label
+                              >
+                              <span
+                                id="F-tooltip1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="right"
+                                title="It usually takes about 20 minutes from Da Nang Airport to Resort by taxi."
+                              >
+                                <i class="fa-regular fa-circle-question"></i>
+                              </span>
+
+                              <div class="d-flex">
+                                <div class="form-check px-3">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-transportation"
+                                    id="F-taxi"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-taxi"
+                                    >By Taxi</label
+                                  >
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-transportation"
+                                    id="F-THI"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-THI"
+                                    >Pick up by T.H.I.</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Meal preferences-->
+                            <div class="transportation pt-3 col-12">
+                              <label
+                                for="F-transportation fw-medium"
+                                class="form-label fw-medium"
+                                >Meal preferences</label
+                              >
+                              <div class="d-flex">
+                                <div class="form-check px-3">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-mealPreferences"
+                                    id="F-nonVegetarian"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-nonVegetarian"
+                                    >Non-vegetarian</label
+                                  >
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input p-1"
+                                    type="radio"
+                                    name="F-mealPreferences"
+                                    id="F-vegetarian"
+                                  />
+                                  <label
+                                    class="form-check-label noPaddings"
+                                    for="F-vegetarian"
+                                    >Vegetarian</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary text-white"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-primary text-white"
+                            >
+                              Add
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -867,7 +1294,7 @@
                     <p class="text-center text-body-tertiary pt-3"></p>
                     <div class="d-flex gap-2 pb-4">
                       <button
-                        class="w-50 mx-auto btn btn-outline-primary mt-2 col-2"
+                        class="backBtn w-50 mx-auto btn btn-outline-primary mt-2 col-2"
                         type="button"
                         data-bs-dismiss="modal"
                         aria-label="Close"

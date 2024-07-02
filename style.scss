@@ -34,7 +34,6 @@ body {
 //  3. $Body
 //------------------//
 
-
 .wrapperIndex {
   .wrap {
     @media (max-width: 767.98px) {
@@ -111,22 +110,13 @@ body {
       }
     }
   }
-.links{
-  width: 315px;
-  text-align: center;
-  margin: 0 auto;
-}
+  .links {
+    width: 315px;
+    text-align: center;
+    margin: 0 auto;
+  }
   .allBtn {
     width: 315px;
-    
-  }
-  .backBtn {
-    &:hover{
-      color:white;
-    }
-    a {
-      color: $primary;
-    }
   }
 
   .stepSection {
@@ -182,4 +172,12 @@ body {
 //隱藏
 #colleagueName {
   display: none;
+}
+
+.backBtn {
+  &:hover {
+    color: white;
+    background-color: #b3b3b3;
+    border-color: #b3b3b3;
+  }
 }

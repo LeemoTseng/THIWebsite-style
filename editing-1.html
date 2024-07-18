@@ -28,7 +28,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.9.14/layui.js"
+      integrity="sha512-atGK5XdUVO4syaFNK47RNn70V3ToFBZLGyyEqtjmmnr+WnOdGJKQX73OEdKhpjbpWvqx+1+BpXvJVufNJXRbhQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.9.14/css/layui.css"
+      integrity="sha512-YL3el60sSycKIM/ld2Vf1bD4qd3JvBJ0+y4Ra/rOdZrin7FC+ng3JSu2yGHddZ6m+npECxE4BCw76sGnH9PyWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- custom css -->
     <link rel="stylesheet" href="./style.css" />
     <script src="main.js" defer></script>
@@ -591,14 +603,15 @@
                               </select>
                             </div>
                             <!-- F-arrival date and time-->
-                            <div class="arrivalTime pt-3 col-12">
+                            <div class="arrivalTime pt-3 col-6 col-lg-3">
                               <label
-                                for="F-arrivalDateTime"
+                                for="arrivalDateTime"
                                 class="form-label w-100 fw-medium"
                                 >Arrival Date and Time</label
                               >
                               <input
-                                class="form-control datetimepicker"
+                                id="datetime"
+                                class="form-control"
                                 type="text"
                               />
                             </div>
@@ -617,16 +630,16 @@
                               />
                             </div>
                             <!-- Departure date and time-->
-                            <div class="departureTime pt-3 col-12">
+                            <div class="DepartureTime pt-3 col-6 col-lg-3">
                               <label
-                                for="F-departureDateTime"
+                                for="departureDateTime"
                                 class="form-label fw-medium"
                                 >Departure Date and Time</label
                               >
                               <input
                                 type="text"
-                                id="F-departureDateTime"
-                                class="form-control datetimepicker"
+                                id="datetime"
+                                class="form-control"
                               />
                             </div>
                             <!-- Departure flight no.-->
@@ -843,11 +856,7 @@
                 <label for="arrivalDateTime" class="form-label w-100 fw-medium"
                   >Arrival Date and Time</label
                 >
-                <input
-                  class="form-control datetimepicker"
-                  type="text"
-                  class="form-control"
-                />
+                <input id="datetime" class="form-control" type="text" />
               </div>
               <!-- arrival flight no.-->
               <div class="arrival pt-3 col-6 col-lg-3">
@@ -862,15 +871,11 @@
                 />
               </div>
               <!-- Departure date and time-->
-              <div class="departureTime pt-3 col-6 col-lg-3">
+              <div class="DepartureTime pt-3 col-6 col-lg-3">
                 <label for="departureDateTime" class="form-label fw-medium"
                   >Departure Date and Time</label
                 >
-                <input
-                  type="text"
-                  id="departureDateTime"
-                  class="form-control datetimepicker"
-                />
+                <input type="text" id="datetime" class="form-control" />
               </div>
               <!-- Departure flight no.-->
               <div class="departure pt-3 col-6 col-lg-3">

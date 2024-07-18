@@ -1,3 +1,22 @@
+
+//daate and time picker
+
+      layui.use(["layer", "form"], function () {
+        var layer = layui.layer;
+        var form = layui.form;
+      });
+      layui.use("laydate", function () {
+        var laydate = layui.laydate;
+
+        // formate
+        laydate.render({
+          elem: "#datetime",
+          type: "datetime",
+          lang: 'en'
+        });
+      });
+
+
 // date picker
 
 $(function () {

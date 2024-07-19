@@ -12,7 +12,9 @@
         laydate.render({
           elem: "#datetime",
           type: "datetime",
-          lang: 'en'
+          lang: 'en',
+          format: 'yyyy-MM-dd HH:mm',
+          theme: '#F7941D'
         });
       });
 

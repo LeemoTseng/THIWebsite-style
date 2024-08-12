@@ -146,14 +146,32 @@
               <!-- Photo upload -->
               <div class="mb-3 pt-3 col-12 col-md-6">
                 <label for="photoUpload" class="form-label fw-medium"
-                  >Profile Photo</label
-                >
+                  >Profile Photo
+                  <span
+                    id="tooltip3"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="right"
+                    title="The photo will be used for the guest introduction."
+                  >
+                    <i class="fa-regular fa-circle-question"></i> </span
+                ></label>
                 <input
                   class="form-control"
                   id="photoUpload"
                   type="file"
                   required
                 />
+                <p
+                  style="
+                    font-size: 12px;
+                    padding-top: 3px;
+                    color: gray;
+                    margin-bottom: -5px;
+                  "
+                >
+                  * Please upload your personal photo in png./ jpg./ jepg./ pdf.
+                  format with a size not exceeding 5M.
+                </p>
               </div>
               <!-- Gender -->
               <div class="gender pt-3 col-12 col-md-4">

@@ -1,6 +1,6 @@
 
 //daate and time picker
-
+if (document.querySelector("#datetime")) {
       layui.use(["layer", "form"], function () {
         var layer = layui.layer;
         var form = layui.form;
@@ -17,7 +17,7 @@
           theme: '#F7941D'
         });
       });
-
+    }
 
 // date picker
 

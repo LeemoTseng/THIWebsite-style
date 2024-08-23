@@ -1,16 +1,19 @@
 
-//daate and time picker
-if (document.querySelector("#datetime")) {
-      layui.use(["layer", "form"], function () {
-        var layer = layui.layer;
-        var form = layui.form;
-      });
-      layui.use("laydate", function () {
-        var laydate = layui.laydate;
 
-        // formate
+if (document.querySelectorAll(".datetime")) {
+  layui.use(["layer", "form", "laydate"], function () {
+    var layer = layui.layer;
+    var form = layui.form;
+    var laydate = layui.laydate;
+
+    // Date and time picker
+    var datetimeElements = document.querySelectorAll(".datetime");
+    // console.log(datetimeElements);
+
+    if (datetimeElements.length > 0) {
+      datetimeElements.forEach(function (elem) {
         laydate.render({
-          elem: "#datetime",
+          elem: elem,
           type: "datetime",
           lang: 'en',
           format: 'yyyy-MM-dd HH:mm',
@@ -19,47 +22,54 @@ if (document.querySelector("#datetime")) {
       });
     }
 
-// date picker
+    // Date picker
+    var datepickerElements = document.querySelectorAll(".datepicker");
+    console.log(datepickerElements);
 
-$(function () {
-  $(".datepicker").datepicker();
-  $("#anim").on("change", function () {
-    $(".datepicker").datepicker("option", "showAnim", $(this).val());
+    if (datepickerElements.length > 0) {
+      datepickerElements.forEach(function (elem) {
+        laydate.render({
+          elem: elem,
+          type: "date",
+          lang: 'en',
+          format: 'yyyy-MM-dd',
+          theme: '#F7941D'
+        });
+      });
+    }
   });
-});
-
-$(document).ready(function () {
-  $(".datepicker").datepicker();
-  $(".datetimepicker").datetimepicker();})
-
-
+}
 
 //隱藏顯示
 
-document.addEventListener("DOMContentLoaded", function () {
-  const colleagueInput = document.querySelector("#colleague");
-  const familyInput = document.querySelector("#family");
-  const colleagueNameDiv = document.querySelector("#colleagueName");
-  const addFamilyBtn = document.querySelector("#addFamilyBtn");
+if (document.querySelector("#roommate")) {
 
-  // Function to update the visibility of the colleague name input and add family button
-  function updateVisibility() {
-    if (colleagueInput.checked) {
-      colleagueNameDiv.style.display = "block";
-      addFamilyBtn.style.display = "none";
-    } else if (familyInput.checked) {
-      colleagueNameDiv.style.display = "none";
-      addFamilyBtn.style.display = "block";
+  document.addEventListener("DOMContentLoaded", function () {
+    const colleagueInput = document.querySelector("#colleague");
+    const familyInput = document.querySelector("#family");
+    const colleagueNameDiv = document.querySelector("#colleagueName");
+    const addFamilyBtn = document.querySelector("#addFamilyBtn");
+
+
+    // Function to update the visibility of the colleague name input and add family button
+    function updateVisibility() {
+      if (colleagueInput.checked) {
+        colleagueNameDiv.style.display = "block";
+        addFamilyBtn.style.display = "none";
+      } else if (familyInput.checked) {
+        colleagueNameDiv.style.display = "none";
+        addFamilyBtn.style.display = "block";
+      }
     }
-  }
 
-  // Initial check on page load
-  updateVisibility();
+    // Initial check on page load
+    updateVisibility();
 
-  // Add event listeners to radio buttons
-  colleagueInput.addEventListener("change", updateVisibility);
-  familyInput.addEventListener("change", updateVisibility);
-});
+    // Add event listeners to radio buttons
+    colleagueInput.addEventListener("change", updateVisibility);
+    familyInput.addEventListener("change", updateVisibility);
+  });
+}
 
 //tooltip
 

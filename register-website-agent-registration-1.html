@@ -20,7 +20,20 @@
       href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
     />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.9.14/layui.js"
+      integrity="sha512-atGK5XdUVO4syaFNK47RNn70V3ToFBZLGyyEqtjmmnr+WnOdGJKQX73OEdKhpjbpWvqx+1+BpXvJVufNJXRbhQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.9.14/css/layui.css"
+      integrity="sha512-YL3el60sSycKIM/ld2Vf1bD4qd3JvBJ0+y4Ra/rOdZrin7FC+ng3JSu2yGHddZ6m+npECxE4BCw76sGnH9PyWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- time picker -->
     <link
       rel="stylesheet"
@@ -327,7 +340,7 @@
                 </select>
               </div>
               <!-- roommate -->
-              <div class="roommate pt-3 col-12">
+              <div id="roommate" class="roommate pt-3 col-12">
                 <label for="roommate" class="form-label fw-medium"
                   >Roommates
                 </label>
@@ -663,7 +676,7 @@
                                 >Arrival Date and Time</label
                               >
                               <input
-                                class="form-control datetimepicker"
+                                class="form-control datetime"
                                 type="text"
                               />
                             </div>
@@ -685,13 +698,13 @@
                             <div class="departureTime pt-3 col-12">
                               <label
                                 for="F-departureDateTime"
-                                class="form-label fw-medium"
+                                class="form-label fw-medium datetime"
                                 >Departure Date and Time</label
                               >
                               <input
                                 type="text"
                                 id="F-departureDateTime"
-                                class="form-control datetimepicker"
+                                class="form-control datetime"
                               />
                             </div>
                             <!-- Departure flight no.-->

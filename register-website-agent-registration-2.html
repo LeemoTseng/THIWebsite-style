@@ -44,7 +44,7 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <div class="wrapperRegis bg-light bg-gradient">
@@ -139,7 +139,7 @@
                 <label for="arrivalDateTime" class="form-label w-100 fw-medium"
                   >Arrival Date and Time</label
                 >
-                <input id="datetime" class="form-control" type="text" />
+                <input class="datetime form-control" type="text" />
               </div>
 
               <!-- arrival flight no.-->
@@ -159,7 +159,7 @@
                 <label for="departureDateTime" class="form-label fw-medium"
                   >Departure Date and Time</label
                 >
-                <input type="text" id="datetime" class="form-control" />
+                <input type="text" class="datetime form-control" />
               </div>
               <!-- Departure flight no.-->
               <div class="departure pt-3 col-6 col-lg-3">
@@ -562,11 +562,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        $(".datepicker").datepicker();
-      });
-    </script>
   </body>
 </html>

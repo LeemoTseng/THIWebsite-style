@@ -24,19 +24,49 @@ if (document.querySelectorAll(".datetime")) {
 
     // Date picker
     var datepickerElements = document.querySelectorAll(".datepicker");
-    console.log(datepickerElements);
+    // console.log(datepickerElements);
 
-    if (datepickerElements.length > 0) {
-      datepickerElements.forEach(function (elem) {
-        laydate.render({
-          elem: elem,
-          type: "date",
-          lang: 'en',
-          format: 'yyyy-MM-dd',
-          theme: '#F7941D'
-        });
+      if (datepickerElements.length > 0) {
+    datepickerElements.forEach(function (elem) {
+      let userInput = ""; 
+      
+      laydate.render({
+        elem: elem,
+        type: "date",
+        lang: 'en',
+        theme: '#F7941D',
+        trigger: 'click', 
+        show: false, 
+        done: function(value) {
+          userInput = value; 
+          // console.logo(userInput);
+        }
       });
-    }
+
+      // 监听手动输入，更新存储的用户输入
+      elem.addEventListener('input', function () {
+        userInput = elem.value; // 存储用户输入的值
+      });
+
+    
+      elem.addEventListener('blur', function () {
+        elem.value = userInput; 
+      });
+
+      elem.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault(); 
+          elem.blur(); 
+          setTimeout(function() {
+            elem.value = userInput; 
+          }, 10);
+        }
+      });
+    });
+  }
+
+
+
   });
 }
 

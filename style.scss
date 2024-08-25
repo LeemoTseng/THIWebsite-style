@@ -221,3 +221,62 @@ body {
     border-color: #b3b3b3;
   }
 }
+
+
+//BS5datepicker樣式
+
+/* 自定义输入框样式 */
+.BS5datepicker {
+  border: 2px solid #F7941D; /* 边框颜色 */
+  border-radius: 8px; /* 边框圆角 */
+  padding: 10px; /* 内边距 */
+  font-size: 16px; /* 字体大小 */
+}
+
+/* 日期选择器整体样式 */
+.datepicker {
+  border: 1px solid #F7941D; /* 边框颜色 */
+  border-radius: 8px; /* 圆角边框 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 日期选择器的标题栏样式 */
+.datepicker .datepicker-switch {
+  background-color: #F7941D; /* 背景颜色 */
+  color: #ffffff; /* 字体颜色 */
+  padding: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 自定义导航箭头样式 */
+.custom-arrow {
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* 日期的普通样式 */
+.datepicker .day {
+  color: #333; /* 文字颜色 */
+  background-color: #fff; /* 背景颜色 */
+}
+
+/* 被选中的日期样式 */
+.datepicker .day.active {
+  background-color: #F7941D !important; /* 选中日期的背景颜色 */
+  color: #ffffff !important; /* 选中日期的文字颜色 */
+  border-radius: 50%; /* 圆形背景 */
+}
+
+/* 不可选的日期样式 */
+.datepicker .day.old, 
+.datepicker .day.new {
+  color: #ccc; /* 灰色表示不可选的日期 */
+}
+
+/* 星期标题样式 */
+.datepicker thead th {
+  color: #333; /* 星期标题的文字颜色 */
+  font-weight: bold;
+}
